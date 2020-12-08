@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Java教程：集合 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如果把表的主键设为了自增长，在后面进行insert操作时，数据库自动帮我们生成了id。 比如： 1insert into account (name, money) values (#&amp;#123;name&amp;#125;, #&amp;#123;money&amp;#125;) &#x2F;&#x2F;假设name &#x3D; &quot;vip&quot;, money &#x3D; &quot;666&quot;  执行完后，我们去看数据库，发现多了">
+  <meta name="description" content="如果把表的主键设为了自增长，在后面进行insert操作时，数据库自动帮我们生成了id。 比如：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java教程：集合">
 <meta property="og:url" content="http://example.com/2020/06/25/MyBatis%EF%BC%9AselectKey%E6%A0%87%E7%AD%BE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="如果把表的主键设为了自增长，在后面进行insert操作时，数据库自动帮我们生成了id。 比如： 1insert into account (name, money) values (#&amp;#123;name&amp;#125;, #&amp;#123;money&amp;#125;) &#x2F;&#x2F;假设name &#x3D; &quot;vip&quot;, money &#x3D; &quot;666&quot;  执行完后，我们去看数据库，发现多了">
+<meta property="og:description" content="如果把表的主键设为了自增长，在后面进行insert操作时，数据库自动帮我们生成了id。 比如：">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201006200534198.png">
 <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
 <meta property="article:published_time" content="2020-06-25T01:18:51.000Z">
-<meta property="article:modified_time" content="2020-12-08T16:48:28.778Z">
+<meta property="article:modified_time" content="2020-12-08T16:56:10.313Z">
 <meta property="article:author" content="FDDLC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201006200534198.png">
@@ -157,6 +157,8 @@
       
         <p>如果把表的主键设为了自增长，在后面进行insert操作时，数据库自动帮我们生成了id。</p>
 <p>比如：</p>
+<a id="more"></a>
+
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into account (name, money) values (#&#123;name&#125;, #&#123;money&#125;) //假设name = &quot;vip&quot;, money = &quot;666&quot;</span><br></pre></td></tr></table></figure>
 
 <p>执行完后，我们去看数据库，发现多了一条记录：</p>
