@@ -6,15 +6,58 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>Java教程：集合 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="一、概述 Java单列集合中最顶层的是Collection接口，Collection下又分List和Set两大类：  学习Java集合的时候，建议自顶向下学：先学Collection，再学List和Set，最后学各种具体的集合。 二、Collection接口  1、Collection接口继承了Iterable接口，于是就有了Iterable的一些特性： a、具有迭代器方法： b、能够使用增强fo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java教程：集合">
+<meta property="og:url" content="http://example.com/2020/01/10/Java%E6%95%99%E7%A8%8B%EF%BC%9A%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、概述 Java单列集合中最顶层的是Collection接口，Collection下又分List和Set两大类：  学习Java集合的时候，建议自顶向下学：先学Collection，再学List和Set，最后学各种具体的集合。 二、Collection接口  1、Collection接口继承了Iterable接口，于是就有了Iterable的一些特性： a、具有迭代器方法： b、能够使用增强fo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/202011011500316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXhjMzI0,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101150417417.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101150654705.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101153605476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXhjMzI0,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101162913716.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101165615350.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXhjMzI0,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101170030857.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101170855250.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101171028140.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101171340457.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020110117175639.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101172349416.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXhjMzI0,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020110117245426.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101172743526.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201101173359632.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020110117393190.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXhjMzI0,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201031171823487.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="article:published_time" content="2020-01-10T01:21:03.000Z">
+<meta property="article:modified_time" content="2020-12-08T16:48:11.466Z">
 <meta property="article:author" content="FDDLC">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/202011011500316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXhjMzI0,size_16,color_FFFFFF,t_70">
   
   
     <link rel="icon" href="/favicon.png">
@@ -128,165 +171,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-素数生成算法-C语言版" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Java教程：集合" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/06/%E7%B4%A0%E6%95%B0%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95-C%E8%AF%AD%E8%A8%80%E7%89%88/">素数生成算法-C语言版</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/06/%E7%B4%A0%E6%95%B0%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95-C%E8%AF%AD%E8%A8%80%E7%89%88/" class="archive-article-date">
-  	<time datetime="2020-09-06T14:18:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>方法一：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRIME_SUM 10 <span class="comment">//素数总数</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> prime[PRIME_SUM] = &#123;<span class="number">2</span>, <span class="number">3</span>&#125;; <span class="comment">//先把2和3放到prime数组中</span></span><br><span class="line"><span class="keyword">int</span> prime_count = <span class="number">2</span>; <span class="comment">//素数计数，目前已有2和3两个素数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">generate_prime</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> number = <span class="number">5</span>; number &lt; <span class="number">100000000</span>; number = number + <span class="number">2</span>) <span class="comment">//对从5开始的每个奇数进行判断</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> is_prime = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//当number = 53时，会用3、5、7去除</span></span><br><span class="line">        <span class="comment">//当number = 65时，会用3和5去除，用5除时不行</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> prime_index = <span class="number">1</span>; prime[prime_index] * prime[prime_index] &lt;= number; prime_index++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(number % prime[prime_index] == <span class="number">0</span>) <span class="comment">//若number能被当前素数整除，则number非素数</span></span><br><span class="line">            &#123;</span><br><span class="line">                is_prime = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(is_prime)</span><br><span class="line">            prime[prime_count++] = number; <span class="comment">//number通过考验，欢迎加入素数大家庭~</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(prime_count == PRIME_SUM) <span class="comment">//已经生成PRIME_SUM个素数，收工~</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    generate_prime();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> prime_index = <span class="number">0</span>; prime_index &lt; PRIME_SUM; prime_index++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, prime[prime_index]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>方法二：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRIME_UPPER_BOUND 1000000 <span class="comment">//素数上界，生成小于该值的所有素数</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> is_prime[PRIME_UPPER_BOUND];</span><br><span class="line"></span><br><span class="line"><span class="comment">//将所有素数初始为0</span></span><br><span class="line"><span class="keyword">int</span> prime[PRIME_UPPER_BOUND] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">generate_prime</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//将所有元素初始化为1，即先假定所有数都为素数。如is_prime[5] = 1, 表示5为素数</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> index = <span class="number">0</span>; index &lt; PRIME_UPPER_BOUND; index++)</span><br><span class="line">        is_prime[index] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> prime_count = <span class="number">0</span>; <span class="comment">//用来计算素数个数</span></span><br><span class="line">    <span class="comment">//divisor：除数，起到筛子的作用</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> divisor = <span class="number">2</span>; divisor * divisor &lt;= PRIME_UPPER_BOUND; divisor++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//若divisor为素数，则把所有的倍数(自身除外)淘汰。比如divisor = 3是素数，</span></span><br><span class="line">        <span class="comment">//则把6、9、12等数给淘汰</span></span><br><span class="line">        <span class="keyword">if</span>(is_prime[divisor]) <span class="comment">//4被2筛除过，无须作筛子；9被3筛除过，无须作筛子</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> n_divisor = divisor + divisor;</span><br><span class="line">            <span class="keyword">while</span>(n_divisor &lt;= PRIME_UPPER_BOUND)</span><br><span class="line">            &#123;</span><br><span class="line">                is_prime[n_divisor] = <span class="number">0</span>; <span class="comment">//将divisor的倍数(自身除外)判为非素数</span></span><br><span class="line">                n_divisor = n_divisor + divisor; <span class="comment">//下一个倍数</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> number = <span class="number">2</span>; number &lt;= PRIME_UPPER_BOUND; number++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(is_prime[number]) <span class="comment">//若number是素数，则将其加入到素数大家庭</span></span><br><span class="line">            prime[prime_count++] = number;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> prime_count;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> prime_sum = generate_prime();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> prime_index = <span class="number">0</span>; prime_index &lt; prime_sum; prime_index++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, prime[prime_index]);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;prime_sum: %d\n&quot;</span>, prime_sum);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/06/%E7%B4%A0%E6%95%B0%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95-C%E8%AF%AD%E8%A8%80%E7%89%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MyBatis：selectKey标签" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/25/MyBatis%EF%BC%9AselectKey%E6%A0%87%E7%AD%BE/">Java教程：集合</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/25/MyBatis%EF%BC%9AselectKey%E6%A0%87%E7%AD%BE/" class="archive-article-date">
-  	<time datetime="2020-06-25T01:18:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如果把表的主键设为了自增长，在后面进行insert操作时，数据库自动帮我们生成了id。</p>
-<p>比如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into account (name, money) values (#&#123;name&#125;, #&#123;money&#125;) //假设name = &quot;vip&quot;, money = &quot;666&quot;</span><br></pre></td></tr></table></figure>
-
-<p>执行完后，我们去看数据库，发现多了一条记录：</p>
-<p><img src="https://img-blog.csdnimg.cn/20201006200534198.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>好，现在问题来了：看了数据库后我们知道自动生成的id是11，如果不看数据库，能不能知道这个id呢？</p>
-<p>selectKey就能解决这个问题！</p>
-<p>示例如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;insert&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;cn.liuxingchang.domain.Account&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">keyProperty</span>=<span class="string">&quot;id&quot;</span> <span class="attr">keyColumn</span>=<span class="string">&quot;id&quot;</span> <span class="attr">order</span>=<span class="string">&quot;AFTER&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;int&quot;</span>&gt;</span></span><br><span class="line">        select last_insert_id()</span><br><span class="line">    <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line">    insert into account (name, money) values (#&#123;name&#125;, #&#123;money&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>说明：</strong></p>
-<p>1、keyColumn：数据表中那个自增长的id！</p>
-<p>2、keyProperty：数据表的字段和实体类的属性是对应的，自增长的那玩意儿在实体类中对应的属性就是keyProperty！</p>
-<p>3、order：本标签内的语句(这里是 select last_insert_id() )是先执行还是后执行！</p>
-<p>这里order=”AFTER”，什么意思呢？</p>
-<p>意思是：select last_insert_id()后执行，insert into account (name, money) values (#{name}, #{money})先执行！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/25/MyBatis%EF%BC%9AselectKey%E6%A0%87%E7%AD%BE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java教程：集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/10/Java%E6%95%99%E7%A8%8B%EF%BC%9A%E9%9B%86%E5%90%88/">Java教程：集合</a>
+    <h1 class="article-title" itemprop="name">
+      Java教程：集合
     </h1>
   
 
@@ -379,6 +271,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -386,16 +299,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/10/Java%E6%95%99%E7%A8%8B%EF%BC%9A%E9%9B%86%E5%90%88/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/01/10/Java%E6%95%99%E7%A8%8B%EF%BC%9A%E9%9B%86%E5%90%88/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/06/25/MyBatis%EF%BC%9AselectKey%E6%A0%87%E7%AD%BE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java教程：集合
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/01/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0-%E8%A2%AB5%E6%95%B4%E9%99%A4-%E8%87%AA%E5%8A%A8%E6%9C%BA-DFA-C%E8%AF%AD%E8%A8%80%E7%89%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二进制数_被5整除_自动机(DFA)_C语言版</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -415,83 +396,14 @@
 
 
 
-
   
-    <article id="post-二进制数-被5整除-自动机-DFA-C语言版" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/01/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0-%E8%A2%AB5%E6%95%B4%E9%99%A4-%E8%87%AA%E5%8A%A8%E6%9C%BA-DFA-C%E8%AF%AD%E8%A8%80%E7%89%88/">二进制数_被5整除_自动机(DFA)_C语言版</a>
-    </h1>
   
 
-        
-        <a href="/2019/09/01/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0-%E8%A2%AB5%E6%95%B4%E9%99%A4-%E8%87%AA%E5%8A%A8%E6%9C%BA-DFA-C%E8%AF%AD%E8%A8%80%E7%89%88/" class="archive-article-date">
-  	<time datetime="2019-08-31T16:31:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="题目：输入一个二进制数，判断其是否能被5整除。要求用自动机实现。"><a href="#题目：输入一个二进制数，判断其是否能被5整除。要求用自动机实现。" class="headerlink" title="题目：输入一个二进制数，判断其是否能被5整除。要求用自动机实现。"></a><strong>题目：</strong>输入一个二进制数，判断其是否能被5整除。要求用自动机实现。</h5><p><strong>一、先画状态转换表。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/2018121509011960.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXhjMzI0,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>二、根据状态转换表，代码实现如下：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    下面的StateSet[CurrentState][Condition]是一个二维数组，前一个索引CurrentState表示</span></span><br><span class="line"><span class="comment">    当前状态(转换前的状态)，后一个索引Condition表示转换条件，由CurrentState和Condition</span></span><br><span class="line"><span class="comment">    确定的StateSet[CurrentState][Condition]的值表示下一个状态(转换后的状态)。比如：</span></span><br><span class="line"><span class="comment">    StateSet[3][1] = 2，数字3、1、2的含义可以这样理解：</span></span><br><span class="line"><span class="comment">    3表示当前状态：当前已判断完的二进制字符串被5除的余数为3(假设当前已经判断完了11，</span></span><br><span class="line"><span class="comment">        其被5除的余数即为3)。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    1表示转换条件：待添加到当前字符串末尾的单个二进制字符为1。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    2表示下一个状态：在末尾加入1后形成的新字符串被5除的余数为2(加入1后形成的新字符串111</span></span><br><span class="line"><span class="comment">        被5除的余数为2)。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">int</span> StateSet[<span class="number">5</span>][<span class="number">2</span>] =</span><br><span class="line">    &#123;</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">2</span>, <span class="number">3</span>&#125;,</span><br><span class="line">    &#123;<span class="number">4</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">2</span>&#125;,</span><br><span class="line">    &#123;<span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    Condition, state = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> BinaryString[<span class="number">200</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    输入时可以选择下面几个测试数据：</span></span><br><span class="line"><span class="comment">    abc(不是二进制), 123(不是二进制), 101(十进制5), 110(十进制6)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, BinaryString);  <span class="comment">//输入字符串</span></span><br><span class="line">    <span class="keyword">int</span> BinaryStringLength = <span class="built_in">strlen</span>(BinaryString);  <span class="comment">//求字符串长度</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; BinaryStringLength; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        Condition = (<span class="keyword">int</span>)(BinaryString[i] - <span class="string">&#x27;0&#x27;</span>);  <span class="comment">//字符转数字，比如‘1’转1</span></span><br><span class="line">        <span class="keyword">if</span>(Condition != <span class="number">0</span> &amp;&amp; Condition != <span class="number">1</span>)  <span class="comment">//不是0、1，则输入非法</span></span><br><span class="line">        &#123;</span><br><span class="line">            state = <span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        state = StateSet[state][Condition];  <span class="comment">//转换后的状态</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(state == <span class="number">0</span>)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\nThe binary string is divisible by 5.\n&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(state == <span class="number">-1</span>)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\nThe string is not binary.\n&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\nThe binary string isn&#x27;t divisible by 5, and the remainder is %d.\n&quot;</span>, state);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>三、结果。</strong></p>
-<p>当输入101时，结果如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20181215095533364.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>当输入110时，结果如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/2018121509561885.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>当输入123时，结果如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20181215095651908.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/01/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0-%E8%A2%AB5%E6%95%B4%E9%99%A4-%E8%87%AA%E5%8A%A8%E6%9C%BA-DFA-C%E8%AF%AD%E8%A8%80%E7%89%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -527,8 +439,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
